@@ -1,0 +1,54 @@
+{
+  "name": "@voidrift/mcp-judge",
+  "version": "0.1.0",
+  "description": "VoidRift Judge — an MCP server returning typed verdicts (check/choose/score) over a pluggable JudgeBackend (deterministic/LLM/Jev).",
+  "license": "Apache-2.0",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "voidrift-mcp-judge": "./dist/bin.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest --run"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.1",
+    "@typesafe-ai/sdk": "0.6.0",
+    "zod": "4.6.5"
+  },
+  "peerDependencies": {
+    "@langchain/core": "1.2.17",
+    "@voidrift/core": "^0.1.0"
+  },
+  "devDependencies": {
+    "@langchain/core": "1.2.17",
+    "@types/node": "26.6.5",
+    "@voidrift/core": "^0.1.0",
+    "typescript": "5.9.3",
+    "vitest": "5.0.3"
+  },
+  "voidrift": {
+    "kind": "mcp-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TylerJPresley/voidrift-mcp-judge.git"
+  }
+}
