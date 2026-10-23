@@ -26,7 +26,8 @@
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
     "typecheck": "tsc --noEmit",
-    "test": "vitest --run"
+    "test": "vitest --run",
+    "lint": "eslint src"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "1.32.1",
@@ -42,7 +43,10 @@
     "@types/node": "26.6.5",
     "@voidrift/core": "^0.1.0",
     "typescript": "5.9.3",
-    "vitest": "5.0.3"
+    "vitest": "5.0.3",
+    "eslint": "10.12.0",
+    "eslint-config-prettier": "10.1.8",
+    "typescript-eslint": "8.71.1"
   },
   "voidrift": {
     "kind": "mcp-server"
@@ -50,5 +54,19 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/TylerJPresley/voidrift-mcp-judge.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TylerJPresley/voidrift-mcp-judge/issues"
+  },
+  "homepage": "https://github.com/TylerJPresley/voidrift-mcp-judge#readme",
+  "keywords": [
+    "voidrift",
+    "judge",
+    "mcp",
+    "server",
+    "returning"
+  ],
+  "publishConfig": {
+    "access": "public"
   }
 }
